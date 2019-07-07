@@ -9,7 +9,7 @@ from starlette.middleware.cors import CORSMiddleware
 from starlette.responses import HTMLResponse, JSONResponse
 from starlette.staticfiles import StaticFiles
 
-export_file_url = r'https://www.dropbox.com/s/kw9p1qx9ef5ifjr/pokemon_v4.pkl?dl=1'
+export_file_url = r'https://www.dropbox.com/s/kw9p1qx9ef5ifjr/pokemon_v4.pkl?raw=1'
 export_file_name = 'pokemon_v4.pkl'
 
 # Path to pokemon name file
@@ -17,6 +17,8 @@ file_path = Path("pokemons.txt")
 
 with open("app"/file_path) as file:
     classes = file.readlines()
+
+path = Path(__file__).parent
 
 app = Starlette()
 app.add_middleware(CORSMiddleware, allow_origins=[
