@@ -1,11 +1,11 @@
 body {
-  padding-top: 5rem;
-  background-image: url("/static/Images/bg-image.jpg");
-  background-size: cover;
+    padding-top: 5rem;
+    background-image: url("/static/Images/bg-image.jpg");
+    background-size: cover;
 }
 .starter-template {
-  padding: 3rem 1.5rem;
-  text-align: center;
+    padding: 3rem 1.5rem;
+    text-align: center;
 }
 .bd-placeholder-img {
     font-size: 1.125rem;
@@ -20,4 +20,33 @@ body {
 .bd-placeholder-img-lg {
     font-size: 3.5rem;
 }
+}
+.form-control{
+    position: absolute;
+    z-index: -9999;
+    height: 0px;
+    width: 0px;
+    padding: 0px;
+    margin: 0px;
+    line-height: 0;
+    outline: 0px;
+    border: 0px;
+    opacity: 0;
+}
+
+.no-display {
+    display: none;
+}
+/* Custom CSS begins */
+.content {
+  position: absolute;
+  top: 50%;
+  left:50%;
+  /*transform: translate(-50%,-50%);*/
+}
+
+.card {
+        margin: 0 auto; /* Added */
+        float: none; /* Added */
+        margin-bottom: 10px; /* Added */
 }
