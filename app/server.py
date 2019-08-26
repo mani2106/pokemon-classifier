@@ -9,8 +9,8 @@ from starlette.middleware.cors import CORSMiddleware
 from starlette.responses import HTMLResponse, JSONResponse
 from starlette.staticfiles import StaticFiles
 
-export_file_url = r'https://drive.google.com/uc?export=download&id=1UeD5cIDQf9MpG0uxMrN4rH5NXDZkSsGT'
-export_file_name = 'pokemon_v7_resnet34_st2.pkl'
+export_file_url = r"https://is.gd/flgMdy"
+export_file_name = 'pokemon_resnet18_73acc.pkl'
 
 
 file_path = Path("pokemons.txt")
