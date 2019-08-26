@@ -12,10 +12,7 @@ from starlette.staticfiles import StaticFiles
 export_file_url = r'https://drive.google.com/uc?export=download&id=1UeD5cIDQf9MpG0uxMrN4rH5NXDZkSsGT'
 export_file_name = 'pokemon_v7_resnet34_st2.pkl'
 
-# model_path = Path("./models")
-# print(os.getcwd())
-# print(os.listdir(model_path))
-# Path to pokemon name file
+
 file_path = Path("pokemons.txt")
 
 with open("app"/file_path) as file:
