@@ -84,3 +84,10 @@ fabric.properties
 .idea/sonarlint
 
 # End of https://www.gitignore.io/api/pycharm
+.idea/encodings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/pokemon-app.iml
+.idea/vcs.xml
+__pycache__/server.cpython-37.pyc
+static/Images/Thumbs.db

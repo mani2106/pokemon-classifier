@@ -3,7 +3,7 @@ import aiohttp
 import asyncio
 import uvicorn
 from fastai import *
-from fastai.vision import *
+from fastai.vision import open_image, Path, load_learner, sys
 from io import BytesIO
 from starlette.applications import Starlette
 from starlette.middleware.cors import CORSMiddleware
@@ -14,9 +14,7 @@ app = Starlette()
 app.add_middleware(CORSMiddleware, allow_origins=[
                    '*'], allow_headers=['X-Requested-With', 'Content-Type'])
 app.mount('/static', StaticFiles(directory='static'))
-# app.wsgi_app = ProxyFix(app.wsgi_app)
 
-# export_file_url = r'https://is.gd/acfAOG'
 export_file_url = r"https://is.gd/flgMdy"
 export_file_name = 'pokemon_resnet18_73acc.pkl'
 
@@ -56,24 +54,12 @@ async def setup_learner():
         else:
             raise
 
-
-# loop = asyncio.get_event_loop()
-# # Setup learner task
-# tasks = [asyncio.ensure_future(setup_learner())]
-# # get model object
-# learn = loop.run_until_complete(asyncio.gather(*tasks))[0]
-# loop.close()
-
 loop = asyncio.get_event_loop()
 # Setup learner task
 tasks = [asyncio.ensure_future(setup_learner())]
 # get model object
 learn = loop.run_until_complete(asyncio.gather(*tasks))[0]
 loop.close()
-
-# @app.route('/hello')
-# def hello_world():
-#     return 'Hello, World!'
 
 
 @app.route('/')
