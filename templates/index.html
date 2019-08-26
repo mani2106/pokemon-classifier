@@ -21,9 +21,16 @@
             Try uploading an pokemon image</p>
     </div>
 
-</main><!-- /.container -->
-{% include 'load.html'%}
-
+</main>
+<!-- /.container -->
+<!-- Bootstrap core CSS -->
+<link href="../static/styles/bootstrap.min.css" rel="stylesheet">
+<!-- Custom styles for this template -->
+<link href="../static/styles/starter-template.css" rel="stylesheet">
+<script src="../static/js/jquery-3.3.1.slim.min.js.download"></script>
+<script src="../static/js/bootstrap.bundle.min.js.download"></script>
+<!-- Events for file handling and display-->
+<script src="../static/js/Client.js"></script>
 
 <div class="container">
     <!-- Result Notification -->
@@ -34,7 +41,7 @@
     </div>
 
     <!-- User can upload an image with this-->
-    <form class="container" action="analyze()">
+    <div class="container">
         <div class="align-self-center text-center">
             <div class="card row col-4 mx-auto" id = "file-picker-card" onclick='showPicker()'>
                 <img id='image-picked' class='no-display card-img-top' alt='Chosen Image'>
@@ -50,11 +57,12 @@
             </div>
             <div class="card row col-4 mx-auto" id="result-card">
                 <div class="card-body">
-                    <button id="analyze-button" type="submit" class="btn btn-light">Predict</button>
+                    <button id="analyze-button" type="button"
+                            class="btn btn-light" onclick="analyze()">Predict</button>
                 </div>
             </div>
         </div>
-    </form>
+    </div>
 
 <!--    <div class="userImage">-->
 </div>
