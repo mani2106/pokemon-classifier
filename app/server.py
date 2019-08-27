@@ -2,12 +2,13 @@ import aiohttp
 import asyncio
 import uvicorn
 from fastai import *
-from fastai.vision import *
+from fastai.vision import Path, load_learner, open_image, sys
 from io import BytesIO
 from starlette.applications import Starlette
 from starlette.middleware.cors import CORSMiddleware
 from starlette.responses import HTMLResponse, JSONResponse
 from starlette.staticfiles import StaticFiles
+from flask import render_template
 
 export_file_url = r"https://is.gd/flgMdy"
 export_file_name = 'pokemon_resnet18_73acc.pkl'
@@ -60,7 +61,7 @@ loop.close()
 @app.route('/')
 async def homepage(request):
     html_file = path / 'view' / 'index.html'
-    return HTMLResponse(html_file.open().read())
+    return HTMLResponse(html_file.open(encoding="utf8").read())
 
 
 @app.route('/analyze', methods=['POST'])
