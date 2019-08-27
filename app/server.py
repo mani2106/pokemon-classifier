@@ -8,7 +8,6 @@ from starlette.applications import Starlette
 from starlette.middleware.cors import CORSMiddleware
 from starlette.responses import HTMLResponse, JSONResponse
 from starlette.staticfiles import StaticFiles
-from flask import render_template
 
 export_file_url = r"https://is.gd/flgMdy"
 export_file_name = 'pokemon_resnet18_73acc.pkl'
