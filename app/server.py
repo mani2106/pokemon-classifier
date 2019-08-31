@@ -1,3 +1,4 @@
+import os
 import aiohttp
 import asyncio
 import uvicorn
@@ -74,4 +75,6 @@ async def analyze(request):
 
 if __name__ == '__main__':
     if 'serve' in sys.argv:
-        uvicorn.run(app=app, host='0.0.0.0', port=5000, log_level="info")
+        PORT = os.environ['PORT'] if os.environ['PORT'] else 9000
+        uvicorn.run(app=app, host='0.0.0.0', port= PORT, 
+                    log_level="info")
