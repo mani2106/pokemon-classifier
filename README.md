@@ -4,4 +4,4 @@ This repo is a part of my study in deep learning with [fast.ai](https://www.fast
 
 I have also hosted this web app on heroku, Check it out [here](https://pokemon-classifier.herokuapp.com). 
 
-I will be adding a notebook explaining, how I built the model very soon.
+Blog post explaining the model building process [here](https://mani2106.github.io/My-Blog-Posts/pokemon-classifer/image-classification/fastai/2019/06/01/Fast_ai_lesson_2_pokemon_classifier.html).
