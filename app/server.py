@@ -77,4 +77,4 @@ if __name__ == '__main__':
     if 'serve' in sys.argv:
         PORT = int(os.environ['PORT']) if os.environ.get('PORT') else 9000
         uvicorn.run(app=app, host='0.0.0.0', port= PORT, 
-                    log_level="info")
+                    log_level="info", workers=1)
